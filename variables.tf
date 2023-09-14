@@ -10,3 +10,7 @@ variable "subscription_id"{
 variable "tenant_id"{
   type=string
 }
+variable "account_tier"{
+    type=string
+    default = "STANDARD"
+}
