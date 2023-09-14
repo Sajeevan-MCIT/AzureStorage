@@ -6,7 +6,7 @@ resource "azurerm_resource_group" "azureresourcegroup" {
 }
 
 resource "azurerm_storage_account" "azureresourcegroup" {
-  name                     = "saj_storage_account"
+  name                     = "saj1storage1account"
   resource_group_name      = azurerm_resource_group.azureresourcegroup.name
   location                 = azurerm_resource_group.azureresourcegroup.location
   account_tier             = "Standard"
