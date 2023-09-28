@@ -8,6 +8,13 @@ resource "azurerm_resource_group" "classwork2509" {
   location = var.location
 }
 
+resource "azurerm_storage_account" "classwork2509" {
+  name                     = "storageaccountname"
+  resource_group_name      = azurerm_resource_group.classwork2509.name
+  location                 = azurerm_resource_group.classwork2509.location
+  account_tier             = "Standard"
+  account_replication_type = "GRS"
+}
 
 resource "azurerm_storage_blob" "classwork2509" {
   for_each            = { for brap in local.whatever : brap => brap }  
