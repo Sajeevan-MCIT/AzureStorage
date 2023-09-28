@@ -18,7 +18,7 @@ resource "azurerm_storage_account" "classwork250908" {
 
 resource "azurerm_storage_container" "classwork250907" {
   name                  = "content"
-  storage_account_name  = azurerm_storage_account.example.name
+  storage_account_name  = azurerm_storage_account.classwork250908.name
   container_access_type = "private"
 }
 
